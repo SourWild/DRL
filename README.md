@@ -30,7 +30,7 @@ pip install -r fencing_rl/requirements.txt
 
 如果要使用 EGL：确保系统安装了合适的 EGL 驱动/库（NVIDIA 驱动通常包含）。
 
-### 3. URDF 资源准备（mesh 路径）
+### 3. [请忽略此条，仓库中已包含urdf资源] URDF 资源准备（mesh 路径），
 urdf-sw 的 `urdf.urdf` 使用 `package://urdf/meshes/...` 路径，有两种处理方式：
 - 方案A（推荐简单可靠）：将 `meshes/` 目录移动到 `urdf/` 下，形成 `urdf/meshes/...`。
 - 方案B（不移动目录）：使用环境类的 `fix_mesh_paths=True` 自动改写为 `../meshes/...`。
@@ -38,7 +38,7 @@ urdf-sw 的 `urdf.urdf` 使用 `package://urdf/meshes/...` 路径，有两种处
 注意：若选择方案A，则无需 `fix_mesh_paths`。
 
 ### 4. 路径与导入（很重要）
-脚本中已加入：
+./fencing_rl/scripts 路径下两脚本（line7&line9）包含：
 ```python
 import sys
 sys.path.append("/home/student/tqz/project_iss")  # 改成 fencing_rl 的父目录绝对路径
