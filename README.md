@@ -25,7 +25,7 @@ DRL/
 
 安装示例：
 ```bash
-pip install pybullet numpy imageio
+pip install -r fencing_rl/requirements.txt
 ```
 
 如果要使用 EGL：确保系统安装了合适的 EGL 驱动/库（NVIDIA 驱动通常包含）。
