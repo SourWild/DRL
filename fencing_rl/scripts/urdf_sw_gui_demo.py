@@ -2,7 +2,9 @@ import os
 import argparse
 import numpy as np
 import time
-
+# line7, line9需要改成相应路径
+import sys
+sys.path.append("/home/student/tqz/project_iss")  # 改成 fencing_rl 的父目录绝对路径
 from fencing_rl.envs.urdf_sw_pybullet_env import URDFSwPyBulletEnv
 urdf_dir_default = "/home/student/tqz/project_iss/urdf-sw/urdf" # 改成*/urdf-sw/urdf路径
 
