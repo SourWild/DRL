@@ -19,7 +19,7 @@ DRL/
 ```
 
 ### 2. 环境依赖
-- Python 3.8+
+- Python 3.10.18
 - pybullet, numpy, imageio
 - 可选：EGL（服务器端更快的离屏渲染）
 
