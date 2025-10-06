@@ -2,13 +2,15 @@ import os
 import argparse
 import numpy as np
 import imageio.v2 as imageio
-
+# line7, line9需要改成相应路径
+import sys
+sys.path.append("/home/student/tqz/project_iss")  # 改成 fencing_rl 的父目录绝对路径
 from fencing_rl.envs.urdf_sw_pybullet_env import URDFSwPyBulletEnv
-
+URDF_DIR_DEFAULT = "/home/student/tqz/project_iss/urdf-sw/urdf" # 改成*/urdf-sw/urdf路径
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--urdf_dir", type=str, default="/home/student/tqz/project_iss/urdf-sw/urdf")
+    parser.add_argument("--urdf_dir", type=str, default=URDF_DIR_DEFAULT)
     parser.add_argument("--urdf_filename", type=str, default="urdf.urdf")
     parser.add_argument("--fix_mesh_paths", action="store_true")
     parser.add_argument("--steps", type=int, default=600)

@@ -14,6 +14,7 @@ except Exception:
 import pybullet as p
 import pybullet_data
 
+urdf_dir_default = "/home/student/tqz/project_iss/urdf-sw/urdf"
 
 class URDFSwPyBulletEnv(gym.Env):
     """
@@ -34,7 +35,7 @@ class URDFSwPyBulletEnv(gym.Env):
 
     def __init__(
         self,
-        urdf_dir: str = "/home/student/tqz/project_iss/urdf-sw/urdf",
+        urdf_dir: str = urdf_dir_default,
         urdf_filename: str = "urdf.urdf",
         use_gui: bool = False,
         time_step_s: float = 1.0 / 240.0,
@@ -396,7 +397,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--urdf_dir",
         type=str,
-        default="/home/student/tqz/project_iss/urdf-sw/urdf",
+        default=urdf_dir_default,
         help="Directory containing the URDF and meshes",
     )
     parser.add_argument(

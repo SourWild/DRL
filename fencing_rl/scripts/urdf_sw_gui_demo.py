@@ -4,11 +4,11 @@ import numpy as np
 import time
 
 from fencing_rl.envs.urdf_sw_pybullet_env import URDFSwPyBulletEnv
-
+urdf_dir_default = "/home/student/tqz/project_iss/urdf-sw/urdf" # 改成*/urdf-sw/urdf路径
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--urdf_dir", type=str, default="/home/student/tqz/project_iss/urdf-sw/urdf")
+    parser.add_argument("--urdf_dir", type=str, default=urdf_dir_default)
     parser.add_argument("--urdf_filename", type=str, default="urdf.urdf")
     parser.add_argument("--fix_mesh_paths", action="store_true")
     parser.add_argument("--steps", type=int, default=0, help="0 表示持续运行，>0 表示运行指定步数")
